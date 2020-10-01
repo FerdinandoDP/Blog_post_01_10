@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--first container-->
+    <div class="container-fluid " style="background-color:cadetblue ">
+        <div class=row></div>
+        <div class="row-fluid mx-2 mt-2 bg-light">
+            <!--header-->
+            <header>
+                <h1 class="text-center">Blog</h1>
+            </header>
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark mb-2">
+                <div class="navbar-brand text-white">FDP</div>
+                <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#voices" aria-controls="voices" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse" id="voices">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active ">
+                            <a class="nav link text-white" href="#">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row"></div>
+        
+    </div>
+    <div class="container-fluid bg-dark">
+    <div class="row align-items-start">
+        <div class="col">
+            <button class="btn btn-light my-2 ml-2" data-toggle="modal" data-target="#modal_insert">aggiungi articolo</button> 
+        </div>
+        <div class="col">
+            
+        </div>
+        <div class="col ">
+            
+        </div>
+    </div>
+    <div class="row mt-2 mx-2 bg-light align-items-start center" id="article_section_p">
+        
+        
+    </div>
+    <div class="row mb-2 mx-2 bg-light align-items-start center" id="article_section">
+        
+        
+    </div>
+    <div class="row">
+        <!--<button class="btn btn-light ml-4" data-toggle="modal" data-target="#modal_insert">aggiungi articolo</button>--> 
+        <div class="modal fade" id="modal_insert" tabindex="-1" role="dialog" aria-labelledby="modal_insertLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal_insertLabel">Aggiungi un articolo!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control mb-2" id="recipient-title" placeholder="Inserisci il titolo">
+                        <textarea class="form-control mb-2" id="text-body" placeholder="Inserisci il corpo"></textarea>
+                        <label for="checkbox_pp" class="col-form-label">In Primo Piano:</label>
+                        <div id="checkbox_pp">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio1">Si</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-info" type="button" id="send_article">Invia</button>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <!--footer-->
+    <div class="row-fluid mx-2 my-2">
+        <footer style="background-color:cadetblue">
+            <h5 class="p-2 text-dark">Ferdinando Di Pasquale</h5>
+            <p class="mx-2 text-white">bla bla bla <br> bla bla bla <br> bla bla bla</p>
+        </footer>
+    </div>
+    <div class="row"> </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="model/Post.js"></script>
+    <script src="controller/index.js"></script>
+    <script src="model/Comment.js"></script>
+</body>
+</html>
